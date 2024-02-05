@@ -72,11 +72,61 @@ import "fmt"
 //}
 
 // 8 EXAMPLE
+//func main() {
+//	var a int
+//	fmt.Print("Введите число: ")
+//	fmt.Scan(&a)
+//	a *= 2
+//	a += 100
+//	fmt.Print(a)
+//}
+
+// 9 EXAMPLE
+//func main() {
+//
+//	var a int
+//	var b int
+//	fmt.Scan(&a) // считаем переменную 'a' с консоли
+//	fmt.Scan(&b) // считаем переменную 'b' с консоли
+//
+//	a *= a
+//	b *= b
+//	fmt.Println(a + b)
+//}
+
+// 10 EXAMPLE
+//func main() {
+//
+//	var a int
+//	fmt.Scan(&a)
+//
+//	a *= a
+//	fmt.Println(a)
+//}
+
+// 11 EXAMPLE
+//func main() {
+//	var a int
+//	fmt.Scan(&a)
+//	fmt.Println(a % 10) // вывод: последняя цифра натурального числа из консоли
+//}
+
+// 12 EXAMPLE
+//func main() {
+//	var a int
+//	fmt.Scan(&a)
+//	a %= 100
+//	a /= 10
+//	fmt.Println(a) // вывод: вторая цифра с конца натурального числа из консоли
+//}
+
+// 13 EXAMPLE
 func main() {
-	var a int
-	fmt.Print("Введите число: ")
-	fmt.Scan(&a)
-	a *= 2
-	a += 100
-	fmt.Print(a)
+	var d int
+	var h int
+	var m int
+	fmt.Scan(&d)
+	h = d / 30       // округл до целого числа
+	m = 2 * (d % 30) // остаток отделения умножаем на 2
+	fmt.Println("It is", h, "hours", m, "minutes")
 }
