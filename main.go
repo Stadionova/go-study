@@ -121,12 +121,96 @@ import "fmt"
 //}
 
 // 13 EXAMPLE
+//func main() {
+//	var d int
+//	var h int
+//	var m int
+//	fmt.Scan(&d)
+//	h = d / 30       // округл до целого числа
+//	m = 2 * (d % 30) // остаток отделения умножаем на 2
+//	fmt.Println("It is", h, "hours", m, "minutes")
+//}
+
+// 14 EXAMPLE
+//func main() {
+//	var d int
+//	fmt.Scan(&d)
+//
+//	if d > 0 {
+//		fmt.Println("Число положительное")
+//	} else if d < 0 {
+//		fmt.Println("Число отрицательное")
+//	} else {
+//		fmt.Println("Ноль")
+//	}
+//}
+
+// 15 EXAMPLE
+//func main() {
+//	var d int
+//	fmt.Scan(&d)
+//	var n1 int = d % 10
+//	d = d / 10
+//	//fmt.Println(n1)
+//	var n2 int = d % 10
+//	d = d / 10
+//	//fmt.Println(n2)
+//	var n3 int = d % 10
+//	d = d / 10
+//	//fmt.Println(n3)
+//	if n1 != n2 && n1 != n3 && n2 != n3 {
+//		fmt.Println("YES")
+//	} else {
+//		fmt.Println("NO")
+//	}
+//}
+
+// 16 EXAMPLE
+//func main() {
+//	var d int
+//
+//	var oneD int = 0      // 1
+//	var twoD int = 10     // 12
+//	var threeD int = 100  // 123
+//	var fourD int = 1000  // 1234
+//	var fiveD int = 10000 // 12345
+//	var maxD int = 100000 // 123456
+//
+//	fmt.Scan(&d)
+//
+//	if d >= oneD && d < twoD {
+//		fmt.Println(d % 10)
+//	} else if d >= twoD && d < threeD {
+//		fmt.Println(d / 10)
+//	} else if d >= threeD && d < fourD {
+//		fmt.Println(d / 100)
+//	} else if d >= fourD && d < fiveD {
+//		fmt.Println(d / 1000)
+//	} else if d >= fiveD && d < maxD {
+//		fmt.Println(d / 10000)
+//	}
+//}
+
+// 17 EXAMPLE
 func main() {
-	var d int
-	var h int
-	var m int
-	fmt.Scan(&d)
-	h = d / 30       // округл до целого числа
-	m = 2 * (d % 30) // остаток отделения умножаем на 2
-	fmt.Println("It is", h, "hours", m, "minutes")
+	var luckyD int
+	fmt.Scan(&luckyD)
+
+	var firstThreeD int = luckyD / 1000
+	var fD int = firstThreeD / 100
+	var sD int = firstThreeD / 10 % 10
+	var tD int = firstThreeD % 10
+	var firstThreeSum int = fD + sD + tD
+
+	var secondThreeD int = luckyD % 1000
+	var fSD int = secondThreeD / 100
+	var sSD int = secondThreeD / 10 % 10
+	var tSD int = secondThreeD % 10
+	var secondThreeSum int = fSD + sSD + tSD
+
+	if firstThreeSum == secondThreeSum {
+		fmt.Println("YES")
+	} else {
+		fmt.Println("NO")
+	}
 }
