@@ -192,23 +192,39 @@ import "fmt"
 //}
 
 // 17 EXAMPLE
+//func main() {
+//	var luckyD int
+//	fmt.Scan(&luckyD)
+//
+//	var firstThreeD int = luckyD / 1000
+//	var fD int = firstThreeD / 100
+//	var sD int = firstThreeD / 10 % 10
+//	var tD int = firstThreeD % 10
+//	var firstThreeSum int = fD + sD + tD
+//
+//	var secondThreeD int = luckyD % 1000
+//	var fSD int = secondThreeD / 100
+//	var sSD int = secondThreeD / 10 % 10
+//	var tSD int = secondThreeD % 10
+//	var secondThreeSum int = fSD + sSD + tSD
+//
+//	if firstThreeSum == secondThreeSum {
+//		fmt.Println("YES")
+//	} else {
+//		fmt.Println("NO")
+//	}
+//}
+
+// 18 EXAMPLE
 func main() {
-	var luckyD int
-	fmt.Scan(&luckyD)
+	var d int
+	fmt.Scan(&d)
 
-	var firstThreeD int = luckyD / 1000
-	var fD int = firstThreeD / 100
-	var sD int = firstThreeD / 10 % 10
-	var tD int = firstThreeD % 10
-	var firstThreeSum int = fD + sD + tD
+	var firstCondition int = d % 400
+	var secondCondition int = d % 4
+	var thirdCondition int = d % 100
 
-	var secondThreeD int = luckyD % 1000
-	var fSD int = secondThreeD / 100
-	var sSD int = secondThreeD / 10 % 10
-	var tSD int = secondThreeD % 10
-	var secondThreeSum int = fSD + sSD + tSD
-
-	if firstThreeSum == secondThreeSum {
+	if firstCondition == 0 || (secondCondition == 0 && thirdCondition != 0) {
 		fmt.Println("YES")
 	} else {
 		fmt.Println("NO")
