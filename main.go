@@ -216,17 +216,39 @@ import "fmt"
 //}
 
 // 18 EXAMPLE
+//func main() {
+//	var d int
+//	fmt.Scan(&d)
+//
+//	var firstCondition int = d % 400
+//	var secondCondition int = d % 4
+//	var thirdCondition int = d % 100
+//
+//	if firstCondition == 0 || (secondCondition == 0 && thirdCondition != 0) {
+//		fmt.Println("YES")
+//	} else {
+//		fmt.Println("NO")
+//	}
+//}
+
+// 19 EXAMPLE
+//func main() {
+//	for i := 1; i <= 10; i++ {
+//		fmt.Println(i * i)
+//	}
+//}
+
+// 20 EXAMPLE
 func main() {
-	var d int
-	fmt.Scan(&d)
+	var A int
+	var B int
+	var sumAB int = 0
 
-	var firstCondition int = d % 400
-	var secondCondition int = d % 4
-	var thirdCondition int = d % 100
+	fmt.Scan(&A)
+	fmt.Scan(&B)
 
-	if firstCondition == 0 || (secondCondition == 0 && thirdCondition != 0) {
-		fmt.Println("YES")
-	} else {
-		fmt.Println("NO")
+	for i := A; i <= B; i++ {
+		sumAB += i
 	}
+	fmt.Println(sumAB)
 }
