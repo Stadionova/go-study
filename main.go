@@ -239,16 +239,55 @@ import "fmt"
 //}
 
 // 20 EXAMPLE
+//func main() {
+//	var A int
+//	var B int
+//	var sumAB int = 0
+//
+//	fmt.Scan(&A)
+//	fmt.Scan(&B)
+//
+//	for i := A; i <= B; i++ {
+//		sumAB += i
+//	}
+//	fmt.Println(sumAB)
+//}
+
+// 21 EXAMPLE
+//func main() {
+//	var countN int
+//	var eachN int
+//	var sumN int
+//
+//	fmt.Scan(&countN)
+//	fmt.Println(sumN)
+//	for i := 1; i <= countN; i++ {
+//		fmt.Scan(&eachN)
+//		if eachN%8 == 0 && eachN > 9 && eachN < 100 {
+//			sumN += eachN
+//		}
+//	}
+//
+//	fmt.Println(sumN)
+//}
+
+// 22 EXAMPLE
 func main() {
-	var A int
-	var B int
-	var sumAB int = 0
-
-	fmt.Scan(&A)
-	fmt.Scan(&B)
-
-	for i := A; i <= B; i++ {
-		sumAB += i
+	var prevN int = 0
+	var currentN int
+	var countMaxN int = 1
+	fmt.Scan(&currentN)
+	for i := 0; currentN > 0; i++ {
+		if currentN > prevN {
+			prevN = currentN
+			countMaxN = 1
+			fmt.Scan(&currentN)
+		} else if currentN == prevN {
+			countMaxN += 1
+			fmt.Scan(&currentN)
+		} else if currentN < prevN {
+			fmt.Scan(&currentN)
+		}
 	}
-	fmt.Println(sumAB)
+	fmt.Println(countMaxN)
 }
