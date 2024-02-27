@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // 1 EXAMPLE
 // func main() {
 //     fmt.Println("Hello, Go!")
@@ -346,76 +344,81 @@ import "fmt"
 //}
 
 // 26 EXAMPLE
+//func main() {
+//	var n int
+//	var d int
+//
+//	fmt.Scan(&n)
+//	fmt.Scan(&d)
+//
+//	var nCopy int = n // 564
+//	var dCopy int = d // 8954
+//
+//	for i := 0; i <= 5; i++ {
+//		var n1 = nCopy/10 == 0    // 1 digit 1
+//		var n2 = nCopy/100 == 0   // 2 digit 12
+//		var n3 = nCopy/1000 == 0  // 3 digit 123
+//		var n4 = nCopy/10000 == 0 // 4 digit 1234
+//
+//		var nToFind int = nCopy // first digit n
+//		if n1 {
+//			nToFind = nCopy
+//		} else if n2 {
+//			nToFind = nCopy / 10
+//		} else if n3 {
+//			nToFind = nCopy / 100
+//		} else if n4 {
+//			nToFind = nCopy / 1000
+//		}
+//		dCopy = d
+//
+//		for j := 0; j <= 5; j++ {
+//			var d1 = dCopy/10 == 0    // 1 digit 1
+//			var d2 = dCopy/100 == 0   // 2 digit 12
+//			var d3 = dCopy/1000 == 0  // 3 digit 123
+//			var d4 = dCopy/10000 == 0 // 4 digit 1234
+//			var dToFind = dCopy       // first digit d
+//
+//			if d1 {
+//				dToFind = dCopy
+//			} else if d2 {
+//				dToFind = dCopy / 10
+//			} else if d3 {
+//				dToFind = dCopy / 100
+//			} else if d4 {
+//				dToFind = dCopy / 1000
+//			}
+//
+//			if d1 {
+//				dCopy = dCopy
+//			} else if d2 {
+//				dCopy = dCopy % 10 // cut first digit d
+//			} else if d3 {
+//				dCopy = dCopy % 100 // cut first digit d
+//			} else if d4 {
+//				dCopy = dCopy % 1000 // cut first digit d
+//			}
+//
+//			if nToFind == dToFind {
+//				fmt.Print(nToFind)
+//				fmt.Print(" ")
+//				break
+//			}
+//		}
+//
+//		if n1 {
+//			break
+//		} else if n2 {
+//			nCopy = nCopy % 10 // cut first digit n
+//		} else if n3 {
+//			nCopy = nCopy % 100 // cut first digit n
+//		} else if n4 {
+//			nCopy = nCopy % 1000 // cut first digit n
+//		}
+//	}
+//}
+
+// 27 EXAMPLE
 func main() {
-	var n int
-	var d int
-
-	fmt.Scan(&n)
-	fmt.Scan(&d)
-
-	var nCopy int = n // 564
-	var dCopy int = d // 8954
-
-	for i := 0; i <= 5; i++ {
-		var n1 = nCopy/10 == 0    // 1 digit 1
-		var n2 = nCopy/100 == 0   // 2 digit 12
-		var n3 = nCopy/1000 == 0  // 3 digit 123
-		var n4 = nCopy/10000 == 0 // 4 digit 1234
-
-		var nToFind int = nCopy // first digit n
-		if n1 {
-			nToFind = nCopy
-		} else if n2 {
-			nToFind = nCopy / 10
-		} else if n3 {
-			nToFind = nCopy / 100
-		} else if n4 {
-			nToFind = nCopy / 1000
-		}
-		dCopy = d
-
-		for j := 0; j <= 5; j++ {
-			var d1 = dCopy/10 == 0    // 1 digit 1
-			var d2 = dCopy/100 == 0   // 2 digit 12
-			var d3 = dCopy/1000 == 0  // 3 digit 123
-			var d4 = dCopy/10000 == 0 // 4 digit 1234
-			var dToFind = dCopy       // first digit d
-
-			if d1 {
-				dToFind = dCopy
-			} else if d2 {
-				dToFind = dCopy / 10
-			} else if d3 {
-				dToFind = dCopy / 100
-			} else if d4 {
-				dToFind = dCopy / 1000
-			}
-
-			if d1 {
-				dCopy = dCopy
-			} else if d2 {
-				dCopy = dCopy % 10 // cut first digit d
-			} else if d3 {
-				dCopy = dCopy % 100 // cut first digit d
-			} else if d4 {
-				dCopy = dCopy % 1000 // cut first digit d
-			}
-
-			if nToFind == dToFind {
-				fmt.Print(nToFind)
-				fmt.Print(" ")
-				break
-			}
-		}
-
-		if n1 {
-			break
-		} else if n2 {
-			nCopy = nCopy % 10 // cut first digit n
-		} else if n3 {
-			nCopy = nCopy % 100 // cut first digit n
-		} else if n4 {
-			nCopy = nCopy % 1000 // cut first digit n
-		}
-	}
+	formatData()
 }
