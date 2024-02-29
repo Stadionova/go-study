@@ -419,6 +419,11 @@ package main
 //}
 
 // 27 EXAMPLE
+//func main() {
+//	formatData()
+//}
+
+// 28 EXAMPLE
 func main() {
-	formatData()
+	workArray()
 }
