@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // 1 EXAMPLE
 // func main() {
 //     fmt.Println("Hello, Go!")
@@ -424,6 +426,20 @@ package main
 //}
 
 // 28 EXAMPLE
+//func main() {
+//	workArray()
+//}
+
+// 29 EXAMPLE
 func main() {
-	workArray()
+	var n int // n >= 4
+	fmt.Scan(&n)
+	var a []int
+
+	for i := 0; i < n; i++ {
+		var elem int
+		fmt.Scan(&elem)
+		a = append(a, elem)
+	}
+	fmt.Print(a[3])
 }
