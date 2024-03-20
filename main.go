@@ -443,6 +443,11 @@ package main
 //}
 
 // 30 EXAMPLE
+//func main() {
+//	findMaxNum()
+//}
+
+// 31 EXAMPLE
 func main() {
-	findMaxNum()
+	findEvenNum()
 }
