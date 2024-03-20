@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // 1 EXAMPLE
 // func main() {
 //     fmt.Println("Hello, Go!")
@@ -453,6 +455,32 @@ package main
 //}
 
 // 32 EXAMPLE
+//func main() {
+//	findPositiveNumsCount()
+//}
+
+// 33 EXAMPLE
+//func main() {
+//	var n int // 745
+//	fmt.Scan(&n)
+//
+//	var firstN = n % 10         // 5
+//	var secondN = n % 100 / 10  // 4
+//	var thirdN = n % 1000 / 100 // 7
+//
+//	fmt.Print(firstN + secondN + thirdN)
+//}
+
+// 34 EXAMPLE
 func main() {
-	findPositiveNumsCount()
+	var n int // 745
+	fmt.Scan(&n)
+
+	var firstN = n % 10         // 5
+	var secondN = n % 100 / 10  // 4
+	var thirdN = n % 1000 / 100 // 7
+
+	fmt.Print(firstN)
+	fmt.Print(secondN)
+	fmt.Print(thirdN)
 }
