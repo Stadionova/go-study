@@ -448,6 +448,11 @@ package main
 //}
 
 // 31 EXAMPLE
+//func main() {
+//	findEvenNum()
+//}
+
+// 32 EXAMPLE
 func main() {
-	findEvenNum()
+	findPositiveNumsCount()
 }
