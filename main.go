@@ -472,15 +472,43 @@ import "fmt"
 //}
 
 // 34 EXAMPLE
+//func main() {
+//	var n int // 745
+//	fmt.Scan(&n)
+//
+//	var firstN = n % 10         // 5
+//	var secondN = n % 100 / 10  // 4
+//	var thirdN = n % 1000 / 100 // 7
+//
+//	fmt.Print(firstN)
+//	fmt.Print(secondN)
+//	fmt.Print(thirdN)
+//}
+
+// 35 EXAMPLE
+//func main() {
+//	var s int // 13257
+//	fmt.Scan(&s)
+//
+//	var h = s / (60 * 60)      // 3h
+//	var m = s % (60 * 60) / 60 // 2457s/60s = 40m
+//
+//	fmt.Println("It is", h, "hours", m, "minutes.")
+//}
+
+// 36 EXAMPLE
 func main() {
-	var n int // 745
-	fmt.Scan(&n)
+	var a int // 6
+	fmt.Scan(&a)
+	var b int // 8
+	fmt.Scan(&b)
+	var c int // 10
+	fmt.Scan(&c)
 
-	var firstN = n % 10         // 5
-	var secondN = n % 100 / 10  // 4
-	var thirdN = n % 1000 / 100 // 7
+	if a*a == (b*b+c*c) || b*b == (a*a+c*c) || c*c == (a*a+b*b) {
+		fmt.Print("Прямоугольный")
+	} else {
+		fmt.Print("Непрямоугольный")
+	}
 
-	fmt.Print(firstN)
-	fmt.Print(secondN)
-	fmt.Print(thirdN)
 }
